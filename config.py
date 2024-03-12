@@ -1,0 +1,3 @@
+config = {
+    "query": "football"
+}
