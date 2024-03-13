@@ -32,12 +32,12 @@ async def fetchYoutubeVideos(lim: int, params: dict) -> list[dict]:
             }, d.get('items', [])))
 
 
-# @repeatEvery(seconds=config['repeatInterval'])
+# @repeatEvery(seconds=config['youtube']['repeatInterval'])
 async def fetchYoutubeData():
 
     params = {
         'key': os.environ['YOUTUBE_API_KEY'],
-        'q': config['query'],
+        'q': config['youtube']['query'],
         'type': 'video',
         'order': 'date',
         'part': 'snippet',
