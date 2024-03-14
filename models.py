@@ -12,5 +12,14 @@ class Video(Base):
     published_at = Column(TIMESTAMP, nullable=False)
     thumbnail_url = Column(String(50))
 
+    def getMapping(self):
+        return {
+            'video_id': self.video_id,
+            'title': self.title,
+            'description': self.description,
+            'published_at': self.published_at,
+            'thumbnail_url': self.thumbnail_url
+        }
+
     def __repr__(self):
         return f"<Video(video_id='{self.video_id}', title='{self.title}', description='{self.description}', published_at='{self.published_at}', thumbnail_url='{self.thumbnail_url}')>"

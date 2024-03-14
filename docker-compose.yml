@@ -21,6 +21,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000
+    environment:
+      - YOUTUBE_API_KEY=AIzaSyDEQCY_8C8qeM6H0qiDBSx5R0wpEOcaTDE
     networks:
       - my-network
 
